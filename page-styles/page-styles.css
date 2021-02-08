@@ -1,0 +1,17 @@
+.links {
+	display: flex;
+}
+
+.links a {
+	margin: 0 30px;
+}
+
+.links a:last-child {
+	margin: 0;
+}
+
+.links a:first-child {
+	margin: 0;
+}
+
+/*# sourceMappingURL=page-styles.css.map */

@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "page-styles.css",
+	"sources": [
+		"../sass/page-styles/page-styles.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,MAAM,CAAC;CACN,OAAO,EAAE,IAAI;CAYb;;AAbD,AAGC,MAHK,CAGL,CAAC,CAAC;CACD,MAAM,EAAE,MAAM;CAQd;;AAZF,AAME,MANI,CAGL,CAAC,AAGC,WAAW,CAAC;CACZ,MAAM,EAAE,CAAC;CACT;;AARH,AASE,MATI,CAGL,CAAC,AAMC,YAAY,CAAC;CACb,MAAM,EAAE,CAAC;CACT"
+}

@@ -1,0 +1,852 @@
+/*!
+Theme Name: circus_d
+Theme URI: http://underscores.me/
+Author: Christos TSM
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: circus_d
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+circus_d is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+@import "generic/normalize";
+
+/* Box sizing
+--------------------------------------------- */
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
+// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/components";
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* Jetpack infinite scroll
+--------------------------------------------- */
+@import "plugins/jetpack/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+@import "utilities/accessibility";
+
+/* Alignments
+--------------------------------------------- */
+@import "utilities/alignments";
+
+/* Homepage Styles
+--------------------------------------------- */
+
+* {
+	font-family: $font__main;
+}
+
+.section-margin {
+	margin-top: 150px;
+}
+
+.desktop-hidden {
+	display: none;
+}
+
+/*
+Home Header Section
+*/
+
+.header-section {
+	min-height: 100vh;
+	background-color: $color__blue-primary;
+	padding: 100px 0;
+
+	img {
+		position: relative;
+	}
+
+	#circle-1 {
+		z-index: 3;
+		height: 25%;
+		width: 25%;
+		filter: blur(2px);
+	}
+
+	#circle-2 {
+		z-index: 2;
+		filter: blur(2px);
+	}
+
+	#circle-3 {
+		z-index: 1;
+		height: 10%;
+		width: 10%;
+		filter: blur(2px);
+	}
+
+	#xeirourgiki-ogkologia-img,
+	#laparoskopiki-xeirourgiki-img,
+	#geniki-xeirourgiki-img {
+		width: 20%;
+		position: absolute;
+		right: 0;
+		z-index: 5;
+		opacity: 0;
+		transform: translateX(-351px);
+		pointer-events: none;
+		border: 3px solid $color__light-brown;
+		border-radius: 50%;
+	}
+
+	#xeirourgiki-ogkologia-img {
+		border: 3px solid $color__btn-gray;
+	}
+}
+
+.img-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-text-wrapper {
+	overflow: hidden;
+	position: absolute;
+	top: 350px;
+	width: 35%;
+	z-index: 5;
+	color: #fff;
+
+	#xeirourgiki-ogkologia-text,
+	#laparoskopiki-xeirourgiki-text,
+	#geniki-xeirourgiki-text {
+		transform: translateY(500px);
+		display: none;
+		h1 {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.cta-wrapper {
+	position: relative;
+	#reverse-animation {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.section-header {
+	color: $color__btn-gray;
+	font-weight: 700;
+	font-size: $font__size-heading;
+	margin-bottom: 100px;
+}
+
+.links {
+	display: flex;
+	margin-top: 100px;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	a {
+		margin: 0 100px;
+		color: $color__text-white;
+		font-size: 1.1em;
+		&:hover {
+			color: $color__text-white;
+		}
+		&:last-child {
+			margin: 0;
+		}
+		&:first-child {
+			margin: 0;
+		}
+	}
+}
+
+.cta-more {
+	background-color: $color__btn-gray;
+	padding: 10px 25px;
+	border-radius: 25px;
+	color: #fff;
+	position: relative;
+	z-index: 4;
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+
+/*
+Home About Section
+*/
+
+.about-text {
+	align-items: flex-end;
+
+	p {
+		margin-bottom: 0;
+		margin-left: 50px;
+	}
+	img {
+		margin-bottom: 3.5px;
+	}
+}
+
+.margin-text {
+	margin: 40px 0 50px 0;
+}
+
+/*
+Home Services Section
+*/
+
+#services {
+	padding: 100px 0;
+}
+
+.services {
+	background-color: $color__background-screen;
+}
+
+.xo {
+	padding-top: 200px;
+}
+
+.services-wrapper {
+	margin-top: 80px;
+}
+
+.service-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.tabs-content-row {
+	min-height: 500px;
+}
+
+.services-line {
+	margin: 50px 0 15px 0;
+}
+
+.service-title {
+	padding: 60px 70px 30px;
+}
+
+.service-description {
+	padding: 0 70px 45px;
+}
+
+.tabs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	div {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		h3 {
+			font-size: 1.1em;
+		}
+	}
+}
+
+[data-tab-content-xo],
+[data-tab-content] {
+	display: none !important;
+}
+
+.active-tab[data-tab-content-xo],
+.active-tab[data-tab-content] {
+	display: block !important;
+}
+
+.tab-content {
+	background-color: #fff;
+}
+
+.tab {
+	cursor: pointer;
+	width: 110px;
+	img {
+		position: relative;
+		opacity: 0.5;
+	}
+}
+
+.tab-text {
+	color: $color__btn-gray;
+	margin-top: 15px;
+	opacity: 0.3;
+	transition: all ease-in-out;
+}
+
+.active-tab-btn {
+	position: relative;
+	p {
+		opacity: 1;
+	}
+	img {
+		opacity: 1;
+	}
+}
+
+.active-tab-btn::before {
+	content: "";
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	width: 2px;
+	background: $color__light-brown;
+	z-index: 0;
+	height: 50px;
+	transform: translateX(-50%);
+}
+
+/*
+Home Blog Section
+*/
+
+.blog-posts-wrapper {
+	margin-top: 85px;
+}
+
+._flex-gap {
+	column-gap: 45px;
+	div {
+		flex: 1;
+	}
+}
+
+.single-blog-item-wrapper {
+	background-color: $color__light-gray;
+	min-height: 500px;
+	position: relative;
+	img {
+		min-height: 250px;
+		min-width: 100%;
+		object-fit: cover;
+	}
+}
+
+.single-blog-item-text {
+	padding: 20px;
+}
+
+.cta-blog-wrapper {
+	text-align: center;
+	margin-top: 95px;
+}
+
+.date {
+	background-color: $color__light-brown;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: -28px;
+	text-align: center;
+	& ~ p {
+		margin-top: 15px;
+	}
+	p {
+		margin-bottom: 0;
+		color: #fff;
+		font-size: 0.75em;
+	}
+}
+
+/*
+Home Testimonials Section
+*/
+
+#testimonials {
+	background-color: $color__light-gray;
+	padding: 100px 0;
+}
+
+.testimonials {
+	position: relative;
+	width: 100%;
+	min-height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-container {
+	width: 95%;
+	margin: 20px auto;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: $font__size-text;
+	cursor: move; /* fallback if grab cursor is unsupported */
+	cursor: grab;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+	filter: blur(3px);
+}
+
+.testimonial-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	padding-bottom: 50px;
+	img {
+		margin-bottom: 25px;
+	}
+}
+
+.swiper-pagination {
+	margin-top: 30px;
+}
+
+.swiper-pagination-bullet-active {
+	background: $color__light-brown !important;
+}
+
+/*
+Home Contact Section
+*/
+
+#contact {
+	background-color: $color__light-brown;
+	padding: 100px 0;
+}
+
+.contact-form-wrapper {
+	background-color: $color__blue-primary;
+	padding: 25px 70px;
+	position: relative;
+	color: #fff;
+}
+
+.contact-logo {
+	position: absolute;
+	top: 0;
+	left: -7%;
+}
+
+.inner-contact-info {
+	margin: 50px 0 20px 0;
+	column-gap: 18px;
+	color: #fff;
+
+	p {
+		margin-bottom: 0 !important;
+		line-height: 2;
+	}
+}
+
+.contact-form {
+	margin-top: 20px;
+}
+
+.wpforms-field-container {
+	textarea,
+	input {
+		border-radius: 25px !important;
+		padding: 25px 15px !important;
+	}
+}
+
+.wpforms-submit-container {
+	text-align: right;
+
+	button {
+		background-color: $color__btn-gray !important;
+		color: #fff !important;
+		border: none !important;
+		border-radius: 25px !important;
+		padding: 15px 55px !important;
+	}
+}
+
+/*
+Footer Styles
+*/
+footer {
+	background-color: $color__btn-gray;
+	text-align: center;
+	padding: 50px 0;
+	a,
+	p {
+		color: #fff;
+		margin-bottom: 0;
+	}
+
+	a:hover {
+		color: #fff;
+	}
+}
+
+/* About Page Styles
+--------------------------------------------- */
+
+#about {
+	margin: 100px 0;
+}
+
+.about-text {
+	font-size: $font__size-text;
+}
+
+.about-details {
+	margin: 3rem 0;
+}
+
+.about-img {
+	margin-bottom: 48px;
+}
+
+.divider {
+	img {
+		min-height: 100%;
+	}
+}
+
+/* Blog Page Styles
+--------------------------------------------- */
+
+.row-gap-100 {
+	row-gap: 100px;
+}
+
+.blog-page {
+	margin: 100px 0;
+}
+
+/* Blog Single Styles
+--------------------------------------------- */
+
+#single-blog {
+	margin: 100px 0;
+}
+
+.single-post-wrapper {
+	background-color: $color__light-gray;
+}
+
+.single-post-content,
+.single-post-title {
+	color: $color__btn-gray;
+}
+
+.content-wrapper {
+	padding: 50px 70px;
+}
+
+.single-date {
+	@extend .date;
+	position: absolute;
+	left: -30px;
+	top: 455px;
+}
+
+.img-container {
+	position: relative;
+	img {
+		min-width: 100%;
+		min-height: 485px;
+	}
+}
+
+.column-post-title {
+	display: flex;
+	align-items: center;
+
+	h4 {
+		font-size: 0.9em;
+	}
+}
+
+.column-posts-height {
+	min-height: 100%;
+}
+
+#posts-column {
+	padding-left: 16px;
+}
+
+/* Blog Single Styles
+--------------------------------------------- */
+
+#gallery {
+	margin: 100px 0;
+}
+
+/* MEDIA QUERIES
+--------------------------------------------- */
+
+/*
+Mobile Media Query
+*/
+
+@media only screen and (max-width: 600px) {
+	.desktop-hidden {
+		display: block;
+	}
+	.mobile-hidden {
+		display: none;
+	}
+
+	.burger-menu {
+		width: 60px;
+		cursor: pointer;
+	}
+
+	#close-burger-menu {
+		cursor: pointer;
+	}
+
+	.mobile-logo {
+		width: 200px;
+	}
+
+	.mobile-menu {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		background: $color__btn-gray;
+		width: 100%;
+		height: 100%;
+	}
+
+	.mobile-menu {
+		padding: 20px;
+	}
+
+	.burger-bg {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+
+	.menu-primary-menu-container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		ul {
+			li {
+				margin: 30px 0;
+				a {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.img-wrapper {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.header-section {
+		#circle-1 {
+			width: 200px;
+			height: 200px;
+			top: -18px;
+			left: 0;
+			filter: blur(0px);
+			position: absolute;
+		}
+
+		#circle-2 {
+			filter: blur(0px);
+			position: absolute;
+			top: -40px;
+			left: 25px;
+			width: 250px;
+		}
+
+		#circle-3 {
+			z-index: 1;
+			width: 180px;
+			height: 180px;
+			filter: blur(0px);
+			position: absolute;
+			right: 15px;
+			top: 0;
+		}
+	}
+
+	.animation-links {
+		flex-direction: column;
+	}
+
+	.links {
+		flex-direction: row;
+		align-items: flex-start;
+		margin-top: 300px;
+		a {
+			margin: 30px 0;
+		}
+
+		.cta-wrapper {
+			a {
+				font-size: 0.9em;
+				padding: 10px 15px;
+			}
+		}
+	}
+
+	.header-text-wrapper {
+		top: 165px;
+		width: 80%;
+		color: #fff;
+		font-size: 0.8em;
+
+		h1 {
+			font-size: 2em;
+		}
+	}
+
+	.about-img {
+		padding-right: 25px;
+	}
+
+	.about-text {
+		flex-direction: column;
+		align-items: self-end;
+
+		p {
+			margin-left: 0;
+			margin-top: 30px;
+		}
+	}
+
+	.about-details {
+		margin: 30px 0;
+	}
+
+	.service-title {
+		padding: 20px 20px 10px;
+	}
+
+	.service-description {
+		padding: 0 20px 20px;
+	}
+
+	._flex-gap {
+		row-gap: 30px;
+	}
+
+	.date {
+		top: -15px;
+		left: -10px;
+	}
+
+	.flex-column-mobile {
+		flex-direction: column;
+	}
+
+	.contact-form-wrapper {
+		padding: 25px 20px;
+	}
+
+	.inner-contact-info {
+		flex-wrap: wrap;
+	}
+
+	.contact-logo {
+		// position: absolute;
+		top: 55px;
+		left: 245px;
+	}
+
+	.divider {
+		display: none;
+	}
+}

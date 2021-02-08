@@ -1,0 +1,32 @@
+// stylelint-disable value-keyword-case
+$font__main: "Roboto Mono", monospace;
+// stylelint-enable value-keyword-case
+$font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+$font__size-heading: 2.1em;
+$font__size-subheading: 1.7em;
+$font__size-21: 1.1em;
+$font__size-text: 0.875em;
+
+.font-size-heading {
+	font-size: $font__size-heading;
+}
+
+.font-size-sub-heading {
+	font-size: $font__size-subheading;
+}
+
+.font-size-text {
+	font-size: $font__size-text;
+}
+
+.font-bold {
+	font-weight: 700;
+}
+
+.font-size-21 {
+	font-size: $font__size-21;
+}
