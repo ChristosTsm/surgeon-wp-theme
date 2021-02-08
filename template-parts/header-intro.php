@@ -39,7 +39,8 @@
 				<a id="laparoskopiki-xeirourgiki" class="font-size-sub-heading" href="#!">Λαπαροσκοπική<br>Χειρουργική</a>
 			</div>
 			<div class="cta-wrapper">
-				<a id="cta-more-btn" class="cta-more font-size-text" href="#!">Περισσότερα &nbsp; <span class="fas fa-arrow-right"></span></a>
+				<a id="cta-more-btn" class="cta-more font-size-text" href="#services">Περισσότερα &nbsp; <span class="fas fa-arrow-right"></span></a>
+
 				<a id="reverse-animation" class="cta-more font-size-text" href="#!"><span class="fas fa-arrow-left"></span>&nbsp; Επιστροφή</a>
 			</div>
 		</div>
